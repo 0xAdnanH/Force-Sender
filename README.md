@@ -1,13 +1,21 @@
-# Sample Hardhat Project
+https://github.com/0xAdnanH/Generic-Contract.git
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+## Installation
 
-Try running some of the following tasks:
+### cloning the repository
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+You can clone the repository and install its dependencies to start using the smart contracts.
+
+```bash
+$ git clone https://github.com/0xAdnanH/Generic-Contract.git
+$ cd ./Generic-Contract
+$ npm install
 ```
+
+
+## Explanation 
+
+This repository contains a generic contract written in Solidity that facilitates the sending of Ether in addition to a force contract that uses "self-destruct" opcode . When Low-Level-Call fails to send ether , the force contract is used to send ether forcefully . 
+
+### Case of failing
+If the recipient address was not an EOA (otherwise it is a smart contract), a receive or fallback function is needed to receive the ether . But supposing the contract does not have any of these functions , the generic contract has the logic to forcefully send ether .
