@@ -1,5 +1,3 @@
-https://github.com/0xAdnanH/Generic-Contract.git
-
 ## Installation
 
 ### cloning the repository
